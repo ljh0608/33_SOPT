@@ -10,10 +10,8 @@
     "sass": "^1.69.2"
   },
   "devDependencies": {
-    "postcss": "^8.4.31",
     "stylelint": "^15.10.3",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recommended": "^13.0.0",
-    "stylelint-config-styled-components": "^0.1.1"
+    "stylelint-config-concentric-order": "^5.2.0",
+    "stylelint-config-recommended": "^13.0.0"
   }
 }

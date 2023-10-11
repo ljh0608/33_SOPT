@@ -1,14 +1,10 @@
 
 {
-    "processors": ["stylelint-processor-styled-components"],
-    "extends": ["stylelint-config-recommended", "stylelint-config-styled-components", "stylelint-config-prettier", "stylelint-config-concentric-order"],
+    "extends": ["stylelint-config-recommended","stylelint-config-concentric-order"],
     "overrides": [
       {
-        "files": ["**/*.{ts,tsx}"],
-        "customSyntax": "@stylelint/postcss-css-in-js"
+        "files": ["**/*.{scss,css}"]
       }
-    ],
-    "rules": {
-      "color-named": "never"
-    }
+  
+    ]
   }
