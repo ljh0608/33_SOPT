@@ -9,3 +9,27 @@ header {
 header .main-title__text {
   color: purple;
 }
+
+.all-item__section {
+  display: flex;
+  justify-content: center;
+  background-color: #eeeeee;
+  padding: 1rem;
+  width: 100%;
+  height: 30rem;
+}
+.all-item__section .all-item__ul {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  overflow: auto;
+  white-space: nowrap;
+}
+.all-item__section .all-item__ul .item__li {
+  margin: 1rem;
+}
+.all-item__section .all-item__ul .item__li article .picture_img {
+  border-radius: 1rem;
+  width: 13rem;
+  height: 18rem;
+}
