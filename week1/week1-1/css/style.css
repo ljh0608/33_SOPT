@@ -1,0 +1,6 @@
+header {
+  background-color: red;
+}
+header .main-title__text {
+  color: purple;
+}
