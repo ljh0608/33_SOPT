@@ -82,8 +82,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 62.5%;
   font: inherit;
+  font-size: 62.5%;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -102,6 +102,7 @@ section {
 }
 body {
   line-height: 1;
+  margin: 0 auto;
 }
 ol,
 ul {
@@ -122,6 +123,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+a {
+  text-decoration: none;
+  color:inherit;
+	cursor: pointer;
+}
+
 button {
   cursor: pointer;
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+h1{
+  font-size: 2.6rem;
+}
+
+h2{
+  font-size: 2.2rem;
+}
+h3{
+  font-size: 1.8rem;
+}
+h4{
+  font-size: 1.4rem;
 }
