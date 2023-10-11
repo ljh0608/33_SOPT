@@ -16,11 +16,12 @@ header .main-title__text {
   background-color: #eeeeee;
   padding: 1rem;
   width: 100%;
-  height: 30rem;
+  height: 34rem;
 }
 .all-item__section .all-item__ul {
   display: flex;
   align-items: center;
+  margin-top: 5rem;
   width: 90%;
   overflow: auto;
   white-space: nowrap;
@@ -32,4 +33,14 @@ header .main-title__text {
   border-radius: 1rem;
   width: 13rem;
   height: 18rem;
+}
+.all-item__section .all-item__ul .item__li article .item-info__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  height: 4rem;
+}
+.all-item__section .all-item__ul .item__li article p {
+  font-size: 1.4rem;
 }

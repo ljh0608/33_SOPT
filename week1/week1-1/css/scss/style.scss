@@ -22,15 +22,15 @@ header {
     background-color: #eeeeee;
     padding:1rem;
     width: 100%;
-    height: 30rem;
+    height: 34rem;
 
     .all-item__ul{
         display: flex;
         align-items: center;
+        margin-top: 5rem;
 
         width: 90%;
         overflow: auto;
-        
         white-space: nowrap;
         .item__li{
             margin:1rem;
@@ -41,7 +41,19 @@ header {
                     width: 13rem;
                     height: 18rem;
                 }
-        
+
+                .item-info__section{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5rem;
+                    margin-top:0.8rem;
+                    height: 4rem;
+                }
+                p{
+                    
+                    font-size:1.4rem;
+                }
+            
             
             }
            

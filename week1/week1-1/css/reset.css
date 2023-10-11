@@ -102,9 +102,9 @@ section {
   display: block;
 }
 body {
-
   margin: 0 auto;
   line-height: 1;
+  font-family: 'Jua', sans-serif;
 }
 ol,
 ul {
