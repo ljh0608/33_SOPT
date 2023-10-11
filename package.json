@@ -1,0 +1,19 @@
+{
+  "name": "JaehoonLee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DO-SOPT-WEB/JaehoonLee.git",
+  "author": "ljh0608 <m98m@catholic.ac.kr>",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.2"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.31",
+    "stylelint": "^15.10.3",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-styled-components": "^0.1.1"
+  }
+}
