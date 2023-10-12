@@ -8,6 +8,9 @@ main {
     background-color: #eeeeee;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 .top_btn {
     display: flex;
     position: fixed;
@@ -15,6 +18,7 @@ main {
     bottom: 3rem;
     align-items: center;
     justify-content: center;
+    transition:0.4s ease-out;
     border-radius: 100rem;
     background: radial-gradient(circle, #eeaeca 0%, rgba(148, 187, 233, 1) 100%);
 
@@ -216,7 +220,7 @@ main {
 
     .main__article {
         width: 50rem;
-        height: 50rem;
+        height: 52rem;
 
         img {
             width: 100%;
@@ -263,3 +267,5 @@ main {
 }
 }
 }
+
+
