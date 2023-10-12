@@ -171,6 +171,7 @@ html {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   border: 3px solid #a0a0a0;
   width: 120rem;
@@ -221,7 +222,7 @@ html {
   grid-template-rows: 20rem 20rem 20rem 20rem;
   grid-template-columns: 20rem 20rem 20rem 20rem;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   width: 100rem;
   height: 100rem;
 }
@@ -260,4 +261,20 @@ footer {
 }
 footer h3 {
   color: white;
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(1.03);
+  }
+  75% {
+    transform: scale(0.97);
+  }
+}
+.pulse:hover {
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
