@@ -1,9 +1,29 @@
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: cetner;
   background-color: #eeeeee;
+}
+
+.top_btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: radial-gradient(circle, #eeaeca 0%, rgb(148, 187, 233) 100%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.top_btn a {
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .main-title__header {
