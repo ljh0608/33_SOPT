@@ -3,14 +3,19 @@
 header {
     display: flex;
     align-items: center;
+    justify-content: center;
     background: radial-gradient(circle, #eeaeca 0%, rgba(148,187,233,1) 100%);
     padding:1rem;
     width: 100%;
     height: 6.4rem;
-  
-    .main-title__text{
-        color:purple;
+    
+    section{
+        width: 150rem;
+        .main-title__text{
+            color:purple;
+        }
     }
+   
 }
 
 
@@ -19,7 +24,7 @@ header {
 
     display: flex;
     justify-content: center;
-    background-color: #eeeeee;
+
     padding:1rem;
     width: 100%;
     height: 34rem;
@@ -29,30 +34,52 @@ header {
         align-items: center;
         margin-top: 5rem;
 
-        width: 90%;
+        width: 150rem;
+        height: 30rem;
         overflow: auto;
         white-space: nowrap;
         .item__li{
-            margin:1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
+            margin:0.5rem;
+        
+            border-radius: 6px;
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            width: 22rem;
+            height: 26rem;
+            ;
             article {
+                display: flex;
+                flex-direction: column;
+             align-items: center;
+                margin-top: 1rem;
+                width: 16rem;
                 .picture_img{
-                    border-radius: 1rem;
-                    width: 13rem;
+                    border-radius: 10px;
+                    width: 14.5rem;
                     height: 18rem;
                 }
 
-                .item-info__section{
+                .item-info__ul{
                     display: flex;
                     flex-direction: column;
                     gap:0.5rem;
+                    align-items: center;
+                    justify-content: center;
                     margin-top:0.8rem;
-                    height: 4rem;
+                    border-radius: 10px;
+
+                    width: 14.5rem;
+                    height:6rem;
+                   li
+                    {
+                        color:white;
+                        font-size:1.4rem;
+                    }
                 }
-                p{
-                    
-                    font-size:1.4rem;
-                }
+          
             
             
             }

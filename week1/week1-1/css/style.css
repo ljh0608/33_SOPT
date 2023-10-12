@@ -1,19 +1,26 @@
+body{
+  background-color: #eeeeee;
+}
+
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: radial-gradient(circle, #eeaeca 0%, rgb(148, 187, 233) 100%);
   padding: 1rem;
   width: 100%;
   height: 6.4rem;
 }
-header .main-title__text {
+header section {
+  width: 150rem;
+}
+header section .main-title__text {
   color: purple;
 }
 
 .all-item__section {
   display: flex;
   justify-content: center;
-  background-color: #eeeeee;
   padding: 1rem;
   width: 100%;
   height: 34rem;
@@ -22,25 +29,45 @@ header .main-title__text {
   display: flex;
   align-items: center;
   margin-top: 5rem;
-  width: 90%;
+  width: 150rem;
+  height: 30rem;
   overflow: auto;
   white-space: nowrap;
 }
 .all-item__section .all-item__ul .item__li {
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem;
+  border-radius: 6px;
+  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+  width: 22rem;
+  height: 26rem;
+}
+.all-item__section .all-item__ul .item__li article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  width: 16rem;
 }
 .all-item__section .all-item__ul .item__li article .picture_img {
-  border-radius: 1rem;
-  width: 13rem;
+  border-radius: 10px;
+  width: 14.5rem;
   height: 18rem;
 }
-.all-item__section .all-item__ul .item__li article .item-info__section {
+.all-item__section .all-item__ul .item__li article .item-info__ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
   margin-top: 0.8rem;
-  height: 4rem;
+  border-radius: 10px;
+  width: 14.5rem;
+  height: 6rem;
 }
-.all-item__section .all-item__ul .item__li article p {
+.all-item__section .all-item__ul .item__li article .item-info__ul li {
+  color: white;
   font-size: 1.4rem;
 }
