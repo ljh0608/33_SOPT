@@ -3,9 +3,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: cetner;
+  background-color: #eeeeee;
 }
 
-header {
+.main-title__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +15,7 @@ header {
   width: 100%;
   height: 6.4rem;
 }
-header section .main-title__text {
+.main-title__header section .main-title__text {
   color: purple;
 }
 
@@ -77,9 +78,9 @@ header section .main-title__text {
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
-  background-color: rgb(148, 187, 233);
+  background-color: #808080;
   width: 100%;
-  height: 6.2rem;
+  height: 10rem;
 }
 .routing__nav .nav__ul {
   display: flex;
@@ -87,9 +88,31 @@ header section .main-title__text {
 }
 .routing__nav .nav__ul .nav__li a {
   color: white;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .routing__nav .nav__ul .nav__li a:hover {
   text-decoration: underline;
   color: purple;
+}
+
+.content__header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #eeaeca 0%, rgb(148, 187, 233) 100%);
+  width: 150rem;
+  height: 4rem;
+  color: purple;
+  margin-top: 3rem;
+}
+
+.content__section {
+  width: 150rem;
+  border: 3px solid #a0a0a0;
+}
+
+.a {
+  height: 100rem;
 }
