@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가계부</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="title__header">
+        <h1>재후니의 가계부</h1>
+    </header>
+    <section class="deposit__section">
+        <article class="deposit__article">
+            <h2>나의 자산</h2>
+            <p>832,100</p>
+            <section class="withdraw-sum__section">
+                <article class="income__article">+ 888,000</article>
+                <article class="expend__article">- 55,900</article>
+            </section>
+        </article>
+    </section>
+    <hr>
+
+    <main>
+        <header class="date__header">
+            <button type="button" class="date-change-btn">&lt;</button>
+            <h2> 10월 1일 </h2>
+            <button type="button" class="date-change-btn">&gt;</button>
+        </header>
+        <section class="index__section">
+            <div>
+                <p class="index-title__p">내역 리스트</p>
+            </div>
+            <div class="separate-deposit">
+                <div class="custom-income-checkbox action">
+                    <label for="income-btn" class="income-checkbox">
+                        <input id="income-btn" type="checkbox" checked class="income-checkbox__input">
+                        <span>수입 </span>
+                    </label>
+                </div>
+                
+                <div class="custom-income-checkbox action">
+                    <label for="expend-btn" class="income-checkbox">
+                        <input id="expend-btn" type="checkbox"  checked class="income-checkbox__input">
+                        <span>지출 </span>
+                    </label>
+                </div>
+                
+        
+                </div>
+
+        </section>
+        <hr>
+
+        <section class="withdraw__section">
+            <ul class="withdraw__ul">
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">버거킹 와퍼</article>
+                    <article class="history__article expend">-8400</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">교통</article>
+                    <article class="title__article">주차비</article>
+                    <article class="history__article expend">-11000</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">5senso cafe</article>
+                    <article class="history__article expend">-10300</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">GS25 구의 새한점</article>
+                    <article class="history__article expend">-1700</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">알바비</article>
+                    <article class="title__article">아이엠파트너</article>
+                    <article class="history__article income">+ 232000</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">할리스 연신내점</article>
+                    <article class="history__article expend">- 6500</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">알바비</article>
+                    <article class="title__article">디지털새싹 인공지능 교육</article>
+                    <article class="history__article income">+ 656,000</article>
+                    <button type="button" class="delete-btn">x</button>
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">엔제리너스 건대점 엔제리너스 건대점 엔제리너스 건대점</article>
+                    <article class="history__article expend">- 4500</article>
+                    <button type="button" class="delete-btn">x</button>
+
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">엔제리너스 건대점</article>
+                    <article class="history__article expend">- 4500</article>
+                    <button type="button" class="delete-btn">x</button>
+
+                </li>
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">엔제리너스 건대점</article>
+                    <article class="history__article expend">- 4500</article>
+                    <button type="button" class="delete-btn">x</button>
+
+                </li>
+
+                <li class="withdraw__li">
+                    <article class="category__article">식비</article>
+                    <article class="title__article">엔제리너스 건대점</article>
+                    <article class="history__article expend">- 4500</article>
+                    <button type="button" class="delete-btn">x</button>
+
+                </li>
+
+
+
+            </ul>
+        </section>
+
+        <footer>
+            <button class="plus-btn">+</button>
+        </footer>
+    </main>
+</body>
+
+</html>
