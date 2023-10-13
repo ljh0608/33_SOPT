@@ -204,9 +204,16 @@ main {
             color: white;
 
             article {
+                
                 font-size: 1.4rem;
             }
 
+            .title__article{
+                width: 15rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
             .delete-btn {
                 position: absolute;
                 top: 0.8rem;
