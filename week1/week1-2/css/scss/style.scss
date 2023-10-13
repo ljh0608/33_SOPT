@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: black;
+
 }
 
 hr {
@@ -116,49 +117,54 @@ main {
 
 
 
-.custom-income-checkbox{
-  float: left;
-  margin: 4px;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background-color: #104068;
-  cursor: pointer;
+.custom-income-checkbox {
+    display: flex;
+    float: left;
 
+    margin: 4px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #808080;
+    cursor: pointer;
     width: 5rem;
-    height:3rem ;
-  overflow: hidden;
+    height: 3rem;
+    overflow: hidden;
+
+    label {
+        float: left;
+        width: 5rem;
+        height: 3rem;
+        line-height: 3rem;
+
+        span {
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        input {
+            display: none;
+            position: absolute;
+            color: #fff !important;
+
+        }
+
+        input+span {
+            color: #fff;
+        }
+
+        input:checked+span {
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+        }
+    }
 }
 
-.custom-income-checkbox label {
-  float: left;
-  width: 5rem; height: 3rem; line-height: 3rem;
+.action input:checked+span {
+    background-color: #3253FF;
 }
-
-.custom-income-checkbox label span {
-  display: block;
-  cursor: pointer;
-  text-align: center;
-  color: white;
-  font-size: 1.4rem;
-}
-
-.custom-income-checkbox label input {
-  display: none;
-  position: absolute;
-  color: #fff !important;
-
-}
-/* selects all of the text within the input element and changes the color of the text */
-.custom-income-checkbox label input + span{color: #fff;}
-
-
-/* This will declare how a selected input will look giving generic properties */
-.custom-income-checkbox input:checked + span {
-    text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-}
-
-.action input:checked + span{background-color: #3253FF;}
 
 
 
