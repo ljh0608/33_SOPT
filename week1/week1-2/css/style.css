@@ -66,9 +66,17 @@ main {
 }
 
 .date__header {
+  display: flex;
+  align-items: center;
   margin-top: 3rem;
-  text-align: center;
   color: white;
+}
+.date__header .date-change-btn {
+  margin: 0 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  font-size: 2rem;
 }
 
 .index__section {
