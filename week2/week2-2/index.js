@@ -223,11 +223,11 @@ function updateSelectOptions(isChecked, option1, option2) {
 document.querySelector('.submitBtn').addEventListener('click', function() {
   
     const type = document.querySelector('input[name="type"]:checked').value;
-    console.log(type)
     const category = document.querySelector('.category').value;
-    const money = parseInt(document.querySelector('.moneyInput').value);
+    const money = parseInt(document.querySelector('.moneyInput').value.replaceAll(',', ''));
+
     const name = document.querySelector('.titleInput').value;
-     
+  
     if (!type || !category || isNaN(money) || money <= 0 || !name) {
         alert("올바른 값을 입력하세요.");
         return;
@@ -256,6 +256,7 @@ const input = document.querySelector('.moneyInput');
 input.addEventListener('keyup', function(e) {
   let value = e.target.value;
   value = Number(value.replaceAll(',', ''));
+
   if(isNaN(value)) {
     input.value = 0;
   }else {
