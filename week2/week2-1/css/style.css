@@ -20,6 +20,7 @@ html {
   align-items: center;
   justify-content: center;
   transition: 0.4s ease-out;
+  z-index: 2;
   border-radius: 100rem;
   background: radial-gradient(circle, #eeaeca 0%, rgb(148, 187, 233) 100%);
   cursor: pointer;
@@ -64,6 +65,18 @@ html {
 .all-item__section .scrollBar::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
 }
+.all-item__section .scroll-button {
+  position: absolute;
+  top: 17rem;
+  color: white;
+  font-size: 3rem;
+}
+.all-item__section .left {
+  left: 2rem;
+}
+.all-item__section .right {
+  right: 2rem;
+}
 .all-item__section .all-item__ul {
   display: flex;
   align-items: center;
@@ -75,6 +88,7 @@ html {
 }
 .all-item__section .all-item__ul .item__li {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   margin: 0.5rem;
@@ -83,11 +97,14 @@ html {
   width: 22rem;
   height: 26rem;
 }
+.all-item__section .all-item__ul .item__li .textbox {
+  display: none;
+}
 .all-item__section .all-item__ul .item__li article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
   width: 16rem;
 }
 .all-item__section .all-item__ul .item__li article .picture_img {
@@ -109,6 +126,78 @@ html {
 .all-item__section .all-item__ul .item__li article .item-info__ul li {
   color: white;
   font-size: 1.4rem;
+}
+.all-item__section .all-item__ul .item__li .dim__explan {
+  position: absolute;
+  opacity: 0;
+}
+.all-item__section .all-item__ul .item__li .dim__explan .textbox {
+  width: 14rem;
+  height: 10rem;
+}
+.all-item__section .all-item__ul .item__li .dim__explan .textbox .subText {
+  display: -webkit-box;
+  width: 13rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-size: 1.4rem;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan {
+  position: absolute;
+  transition: all 0.3s linear;
+  opacity: 1;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 16rem;
+  height: 100%;
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 14rem;
+  height: 20rem;
+  text-align: center;
+  color: white;
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox .subText {
+  display: -webkit-box;
+  width: 13rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-size: 1.4rem;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox .show_more_btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+  border: 2px solid white;
+  border-radius: 0.25em;
+  cursor: pointer;
+  padding: 0.5em;
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox .show_more_btn::before {
+  color: white;
+  content: "더보기";
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox .show_more_btn:checked::before {
+  content: "닫기";
+}
+.all-item__section .all-item__ul .item__li:hover .dim__explan .textbox .subText:has(+ .show_more_btn:checked) {
+  -webkit-line-clamp: unset;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 9.5rem;
 }
 
 .routing__nav {
@@ -139,9 +228,10 @@ html {
   top: 0;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   margin-top: 3rem;
   background: radial-gradient(circle, #eeaeca 0%, rgb(148, 187, 233) 100%);
-  width: 150rem;
+  width: 100%;
   height: 4rem;
   color: purple;
 }
@@ -170,10 +260,20 @@ html {
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: center;
+  max-height: 30rem;
 }
 .content__section .content__ul .content__li .content__img {
   width: 100%;
   height: 100%;
+}
+
+.content__main__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .content2__section {
@@ -218,7 +318,7 @@ html {
     flex-direction: column;
   }
   .content2__section .main__article {
-    width: 200rem;
+    width: 100%;
     height: 20rem;
   }
   .content2__section .main__article .content__img {
@@ -226,7 +326,7 @@ html {
     height: 100%;
   }
 }
-@media (max-width: 1075px) {
+@media (max-width: 1089px) {
   .content2__section .content2__ul .content2__li {
     flex-basis: 30rem;
   }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가계부</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="title__header">
+        <h1>재후니의 가계부</h1>
+    </header>
+    <section class="deposit__section">
+        <article class="deposit__article">
+            <h2>나의 자산</h2>
+            <p></p>
+            <section class="withdraw-sum__section">
+                <article class="income__article"></article>
+                <article class="expend__article"></article>
+            </section>
+        </article>
+    </section>
+    <hr>
+
+    <main>
+        <header class="date__header">
+            <button type="button" class="date-change-btn">&lt;</button>
+            <h2> 10월 1일 </h2>
+            <button type="button" class="date-change-btn">&gt;</button>
+        </header>
+        <section class="index__section">
+            <div>
+                <p class="index-title__p">내역 리스트</p>
+            </div>
+            <div class="separate-deposit">
+                <div class="custom-income-checkbox action">
+                    <label for="income-btn" class="income-checkbox">
+                        <input id="income-btn" type="checkbox" checked class="income-checkbox__input">
+                        <span>수입 </span>
+                    </label>
+                </div>
+                
+                <div class="custom-income-checkbox action">
+                    <label for="expend-btn" class="income-checkbox">
+                        <input id="expend-btn" type="checkbox"  checked class="expend-checkbox__input">
+                        <span>지출 </span>
+                    </label>
+                </div>
+                
+        
+                </div>
+
+        </section>
+        <hr>
+
+        <section class="withdraw__section">
+            <ul class="withdraw__ul">
+            </ul>
+        </section>
+
+ 
+
+        <div class="modal">
+            <div class="modal__contentbox"> 
+                <h2>내역 추가</h2>
+                <div class="modal-type">
+                    <label  class="modal-income">
+                        <input type="radio" name="type" value="income" checked class="modal-income__checkbox">
+                        <span>수입 </span>
+                    </label>
+                    <label  class="modal-expend">
+                        <input  type="radio" name="type" value="expend" class="modal-expend__checkbox">
+                        <span>지출 </span>
+                    </label>
+                </div>
+
+                <h3>종류</h3>
+                <select class="category">
+                    <!-- <option value="">교육알바</option>
+                    <option value="event">행사알바</option> -->
+                </select>
+                <h3>금액</h3>
+                <input type="text" value="" class="moneyInput">
+                <h3>내용</h3>
+                <input type="text" value="" class="titleInput">
+                <div class="btnWrapper">
+                <button type="button" class="submitBtn">저장하기</button>
+                <button type="button" class="closeBtn">닫기</button>
+            </div>
+            </div>
+        </div>
+        <footer>
+            <button type="button" class="plus-btn">+</button>
+        </footer>
+        <div class="deleteModal">
+            <div class="deleteModalContent">
+                <p>삭제하시겠습니까?</p>
+            <div class="deleteBtnWrapper">
+                <button type="button" class="deleteBtn">예</button>
+                <button type="button" class="closeDeleteBtn">아니오</button>
+            </div>
+        </div>`
+        </div>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
