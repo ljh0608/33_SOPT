@@ -1,7 +1,21 @@
-import { INIT_BALANCE, HISTORY_LIST } from "./constant.js";
+import { INIT_BALANCE, HISTORY_LIST,INCOME_CATEGORY,EXPEND_CATEGORY } from "./constant.js";
 
 let filteredHistory=HISTORY_LIST;
 let allHistory=HISTORY_LIST;
+
+
+/**
+ * category 첫 렌더링때만 초기화하는 함수
+ */
+function setCategory(){
+    if(!localStorage.getItem("income_category") || !localStorage.getItem("expend_category") ){
+        let incomeCategory=JSON.stringify(INCOME_CATEGORY);
+        localStorage.setItem('income_category',incomeCategory);
+        let expendCategory=JSON.stringify(EXPEND_CATEGORY);
+        localStorage.setItem('expend_category',expendCategory);
+    }
+}
+setCategory();
 
 
 /**
@@ -167,53 +181,62 @@ const closeBtn=document.querySelector(".closeBtn");
 
   
 function openModal(){
-    modal.style.display = 'flex';
+
      modal.classList.add("modal-open")
 }
 function closeModal(){
      
-    modal.style.display="none";
-    document.querySelector('.moneyInput').value = '';
+ document.querySelector('.moneyInput').value = '';
     document.querySelector('.titleInput').value = '';
     modal.classList.remove("modal-open")
 }
 
-const modalOpen = document.querySelector(".plus-btn");
+const modalOpen = document.querySelector(".plusBtn");
 modalOpen.addEventListener("click",openModal);
+modalOpen.addEventListener("click",renderCategory)
 closeBtn.addEventListener("click",closeModal)
 
 
+
+function renderCategory() {
+    const parsingIncomeCatogry=JSON.parse(localStorage.getItem("income_category"));
+const parsingExpendCatogry=JSON.parse(localStorage.getItem("expend_category"));
+    parsingIncomeCatogry.forEach((item)=>{
+        let option1_ = new Option(item, item);
+        select.options.add(option1_);
+    })
+    document.querySelector('.modal-income__checkbox').addEventListener('change', function() {
+        updateSelectOptions(this.checked, parsingIncomeCatogry);
+    });
+    
+    document.querySelector('.modal-expend__checkbox').addEventListener('change', function() {
+        updateSelectOptions(this.checked, parsingExpendCatogry);
+    });
+}
 
 /**
  * type에 따른 category 생성
  */
 
 const select = document.querySelector('.category');
-let income_option1 = new Option("교육알바", "교육알바");
-let income_option2 = new Option("행사알바", "행사알바");
-select.options.add(income_option1)
-select.options.add(income_option2)
-document.querySelector('.modal-income__checkbox').addEventListener('change', function() {
-    updateSelectOptions(this.checked, '교육알바', '행사알바');
-});
 
-document.querySelector('.modal-expend__checkbox').addEventListener('change', function() {
-    updateSelectOptions(this.checked, '주차비', '교통비');
-});
-
-function updateSelectOptions(isChecked, option1, option2) {
+function updateSelectOptions(isChecked, options) {
     while (select.firstChild) {
         select.removeChild(select.firstChild);
     }
     select.innerHTML = '';
 
     if (isChecked) {
-        let option1_ = new Option(option1, option1);
-        let option2_ = new Option(option2, option2);
-        select.options.add(option1_);
-        select.options.add(option2_);
+        options.forEach((item)=>{
+            let option1_ = new Option(item, item);
+            select.options.add(option1_);
+        })
+    
+
     }
 }
+
+
 
 
 /**
@@ -263,4 +286,9 @@ input.addEventListener('keyup', function(e) {
     const formatValue = value.toLocaleString('ko-KR');
     input.value = formatValue;
   }
+})
+
+const categoryPlusBtn=document.querySelector(".categoryPlusBtn");
+categoryPlusBtn.addEventListener('click',function(){
+    location.href="category.html"
 })

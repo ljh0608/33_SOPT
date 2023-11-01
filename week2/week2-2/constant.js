@@ -21,10 +21,18 @@ export const HISTORY_LIST=[
     }
     ,   {
         category:"교육알바",
-        name:"디지털새싹 인공지능교육 강사",
+        name:"디지털새싹 인공지능교육 강사", 
         money:656000,
         type:"income"
     }
   
+]
+
+export const INCOME_CATEGORY=[
+    "행사알바", "교육알바"
+]
+
+export const EXPEND_CATEGORY=[
+    "교통","식비"
 ]
 
